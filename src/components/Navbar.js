@@ -5,12 +5,15 @@ import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  const [buts, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
   // trying to close dropdown menu when in hamburger
-  const closeDropdownMenu = () => setClick(false);
+  const [openDrop, setOpenDrop] = useState(false);
+  const handleOpen = () => setOpenDrop(!openDrop);
+  const closeDropMenu = () => setOpenDrop(false);
 
   // will activate hamburger menu when screen size is less than 960
   const showButton = () => {
@@ -47,11 +50,16 @@ function Navbar() {
             </li>
 
             {/* plant dropdown menu */}
-            <div className="dropdown">
-              <button className="dropbtn" onClick={closeDropdownMenu}>
-                PLANTS
+            <div className={buts ? "dropdown" : "dropdown active"}>
+              <button className="dropbtn">
+                PLANTS{" "}
+                <i className="fas fa-angle-down" onClick={handleOpen}></i>
               </button>
-              <div className="dropdown-content">
+              <div
+                className={
+                  buts ? "dropdown-content" : "dropdown-content active"
+                }
+              >
                 <Link
                   to="/current-plants"
                   className="nav-links"

@@ -3,10 +3,12 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import Home from "./components/pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Plants from "./components/pages/Plants";
+import CurrentPlants from "./components/pages/CurrentPlants";
 import Blog from "./components/pages/Blog";
-import SignUp from "./components/pages/SignUp";
+import Sidebar from "./components/Sidebar";
 import About from "./components/pages/About";
+import Scroll from "react-scroll";
+const ScrollLink = Scroll.ScrollLink;
 
 function App() {
   return (
@@ -16,11 +18,21 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/plants" component={Plants} />
+          <Route path="/current-plants" component={CurrentPlants} />
           <Route path="/blog" component={Blog} />
-          <Route path="/sign-up" component={SignUp} />
         </Switch>
       </Router>
+
+      {/* <ScrollLink
+        to="example-destination"
+        spy={true}
+        smooth={true}
+        duration={500}
+        className="some-class"
+        activeClass="some-active-class"
+      >
+        Link Text Goes Here
+      </ScrollLink> */}
     </>
   );
 }

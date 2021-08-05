@@ -6,7 +6,7 @@
 }
 
 .home,
-.plants,
+.currentplants,
 .blog,
 .sign-up {
   display: flex;
@@ -16,7 +16,7 @@
   font-size: 3rem;
 }
 
-.plants {
+.currentplants {
   background-image: url("/images/plant-bois/philo-brasil.jpg");
   background-position: center;
   background-size: cover;
@@ -26,7 +26,6 @@
 }
 
 .blog {
-  background-image: url("/images/img-6.jpg");
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
