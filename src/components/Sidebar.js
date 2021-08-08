@@ -12,9 +12,7 @@ function Sidebar() {
             <li>
               <a href="#main">My Current Plants</a>
             </li>
-            <li>
-              <a href="#monstera">Monstera</a>
-            </li>
+            <li>{/* <a href="#monstera">Monstera</a> */}</li>
           </ul>
         </div>
       </nav>
